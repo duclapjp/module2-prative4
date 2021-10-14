@@ -102,7 +102,7 @@ public class Manager {
                     break;
                 }
                 System.out.println("đã quá hạn trả sách");
-                System.out.println(cards.get(i).toString());;
+                System.out.println(cards.get(i).toString());
             }
             }
         if (check) {
@@ -116,8 +116,10 @@ public class Manager {
                 if (cards.get(i).getDeadLine().isAfter(LocalDate.now())){
                     cards.get(i).setStatus(true);
                     System.out.println("cảm ơn bạn đã trả đúng hạn");
+                    break;
                 }else {
                     System.out.println("Xin vui lòng nộp phí quá hạn trả sách");
+                    break;
                 }
             }else {
                 System.out.println("không tìm thấy sinh viên");
